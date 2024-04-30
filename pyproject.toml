@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pythonprojectmypro"
+version = "0.1.0"
+description = ""
+authors = ["nikolay_bogdan <dhjan44@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.4"
+envparse = "^0.2.0"
+psycopg2-binary = "^2.9.9"
+gunicorn = "^22.0.0"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
