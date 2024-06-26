@@ -33,6 +33,17 @@ services:
     volumes:
       - ./todolist:/opt/todolist/
 
+  bot:
+    build: .
+    env_file: .env
+    environment:
+      POSTGRES_HOST: db
+    depends_on:
+      db:
+        condition: service_healthy
+    command: python manage.py runbot
+
+
   collect_static:
     build: .
     env_file: .env
